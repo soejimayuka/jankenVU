@@ -1,0 +1,11 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+
+/*
+  About
+*/
+.p-about {
+  margin-bottom: pxToRem(80px);
+}
+

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+@use "sass:math";
+@use "../global" as *;
+
+/*
+  Section
+*/
+.l-section {
+  padding: pxToRem(40px) 0 0;
+  @include mq(lg) {
+    padding: pxToRem(180px) 0 0;
+  }
+}
+
+.l-section.-secondary {
+  padding: pxToRem(60px) 0 0;
+
+  @include mq(lg) {
+    padding: pxToRem(80px) 0 0;
+  }
+}

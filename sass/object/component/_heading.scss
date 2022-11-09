@@ -1,0 +1,107 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+/*
+  Heading
+*/
+.c-heading {
+  &.-primary {
+    $font-size: 40px;
+    font-size: pxToRem($font-size);
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: pxToRem(40px);
+    font-weight: bold;
+
+    @include mq(sm) {
+      $font-size: 60px;
+      font-size: pxToRem($font-size);
+      margin-bottom: pxToRem(68px);
+    }
+    & .-one {
+      $font-size: 88px;
+      font-size: pxToRem($font-size);
+      padding-right: pxToRem(12px);
+      @include mq(sm) {
+        $font-size: 124px;
+        font-size: pxToRem($font-size);
+      }
+    }
+  }
+
+  &.-secondary {
+    $font-size: 50px;
+    font-size: pxToRem($font-size);
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: pxToRem(40px);
+    font-weight: bold;
+    text-align: center;
+
+    @include mq(sm) {
+      margin-bottom: pxToRem(68px);
+    }
+    & .-caption {
+      display: block;
+      font-weight: normal;
+      font-size: 21px;
+      margin-top: pxToRem(14px);
+      text-align: center;
+    }
+  }
+
+  &.-third {
+    $font-size: 98px;
+    font-size: pxToRem($font-size);
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: pxToRem(40px);
+    font-weight: bold;
+
+    @include mq(sm) {
+      $font-size: 123px;
+      font-size: pxToRem($font-size);
+      margin-bottom: pxToRem(48px);
+    }
+    & .-caption {
+      display: block;
+      font-weight: normal;
+      font-size: 42px;
+      margin-top: pxToRem(14px);
+      text-align: right;
+      padding-right: 2vw;
+      @include mq(sm) {
+        padding-right: 40vw;
+      }
+      @include mq(lg) {
+        padding-right: 0;
+      }
+    }
+  }
+  &.-force {
+    $font-size: 47px;
+    font-size: pxToRem($font-size);
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: pxToRem(38px);
+    font-weight: bold;
+    line-height: 0.8;
+
+    @include mq(sm) {
+      $font-size: 88px;
+      font-size: pxToRem($font-size);
+      margin-bottom: pxToRem(68px);
+    }
+    & .-caption {
+      display: inline-block;
+      font-weight: normal;
+      font-size: 21px;
+      margin-left: pxToRem(14px);
+      text-align: right;
+    }
+  }
+}

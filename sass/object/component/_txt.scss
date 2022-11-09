@@ -1,0 +1,14 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+/*
+  Txt
+*/
+.c-txt.-primary {
+  $font-size: 16px;
+  font-size: pxToRem($font-size);
+  line-height: 1.5;
+  @include mq(lg) {
+    line-height: 2;
+  }
+}

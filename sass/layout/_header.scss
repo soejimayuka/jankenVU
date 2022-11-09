@@ -1,0 +1,24 @@
+@charset 'UTF-8';
+@use "sass:math";
+@use "../global" as *;
+/*
+  Header
+-----------------------------------------------------*/
+
+.l-header {
+  // z-index: 3;
+  position: static;
+  background-color: transparent;
+  padding: pxToRem(15px) pxToRem(60px);
+  width: 100%;
+  border-bottom: 1px solid #efefef;
+
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    width: 90%;
+    margin: 0 auto;
+  }
+}

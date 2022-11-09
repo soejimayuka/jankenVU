@@ -1,0 +1,168 @@
+.inview {
+  -webkit-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+
+.inview[data-duration="fast"] {
+  -webkit-transition-duration: 0.3s;
+          transition-duration: 0.3s;
+}
+
+.inview[data-duration="normal"] {
+  -webkit-transition-duration: 1s;
+          transition-duration: 1s;
+}
+
+.inview[data-duration="slow"] {
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.inview[data-easing="linear"] {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.inview[data-easing="ease"] {
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
+}
+
+.inview[data-easing="ease-in"] {
+  -webkit-transition-timing-function: ease-in;
+          transition-timing-function: ease-in;
+}
+
+.inview[data-easing="ease-out"] {
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+}
+
+.inview[data-easing="ease-in-out"] {
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+.inview[data-easing="ease-in-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+          transition-timing-function: cubic-bezier(0.7, 0, 0.84, 0);
+}
+
+.inview[data-easing="ease-out-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+          transition-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.inview[data-easing="ease-in-out-expo"] {
+  -webkit-transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+          transition-timing-function: cubic-bezier(0.87, 0, 0.13, 1);
+}
+
+.inview[data-easing="in-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+          transition-timing-function: cubic-bezier(0.36, 0, 0.66, -0.56);
+}
+
+.inview[data-easing="out-back"] {
+  -webkit-transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+          transition-timing-function: cubic-bezier(0.68, -0.6, 0.32, 1.6);
+}
+
+.inview[data-type~="fadeIn"].is-inviewReady {
+  opacity: 0;
+}
+
+.inview[data-type~="fadeIn"].is-inviewActive {
+  opacity: 1;
+}
+
+.inview[data-type~="slideUpIn"].is-inviewReady {
+  opacity: 0;
+  -webkit-transform: translateY(2.5rem);
+          transform: translateY(2.5rem);
+}
+
+.inview[data-type~="slideUpIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.inview[data-type~="slideDownIn"].is-inviewReady {
+  opacity: 0;
+  -webkit-transform: translateY(-2.5rem);
+          transform: translateY(-2.5rem);
+}
+
+.inview[data-type~="slideDownIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.inview[data-type~="slideLeftIn"].is-inviewReady {
+  opacity: 0;
+  -webkit-transform: translateX(2.5rem);
+          transform: translateX(2.5rem);
+}
+
+.inview[data-type~="slideLeftIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.inview[data-type~="slideRightIn"].is-inviewReady {
+  opacity: 0;
+  -webkit-transform: translateX(-2.5rem);
+          transform: translateX(-2.5rem);
+}
+
+.inview[data-type~="slideRightIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.inview[data-type~="zoomIn"].is-inviewReady {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.inview[data-type~="zoomIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.inview[data-type~="rotateIn"].is-inviewReady {
+  opacity: 0;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+.inview[data-type~="rotateIn"].is-inviewActive {
+  opacity: 1;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.inview[data-type~="textCloseIn"].is-inviewReady {
+  opacity: 0;
+  letter-spacing: .1em;
+}
+
+.inview[data-type~="textCloseIn"].is-inviewActive {
+  opacity: 1;
+  letter-spacing: inherit;
+}
+
+.inview[data-type~="textShadowIn"].is-inviewReady {
+  color: transparent;
+  text-shadow: 0 0 5rem rgba(0, 0, 0, 0.6);
+}
+
+.inview[data-type~="textShadowIn"].is-inviewActive {
+  color: inherit;
+  text-shadow: 0 0 0 transparent;
+}

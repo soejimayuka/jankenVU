@@ -1,0 +1,49 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+
+/*
+  Activity | アクティビティ
+*/
+
+.p-act {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+
+  &__body {
+    width: 100%;
+    padding-bottom: 0;
+    @include mq(lg) {
+      padding-bottom: pxToRem(40px);
+    }
+  }
+
+  &__title {
+    $font-size: 32px;
+    font-size: pxToRem($font-size);
+
+    padding-bottom: pxToRem(18px);
+    font-family: fot-tsukuardgothic-std, sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  &__subtitle {
+    $font-size: 24px;
+    font-size: pxToRem($font-size);
+    padding-top: pxToRem(24px);
+    padding-bottom: pxToRem(18px);
+    line-height: 1.5;
+  }
+  &__txt {
+    line-height: 1.5;
+  }
+
+  &__img {
+    width: 100%;
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}

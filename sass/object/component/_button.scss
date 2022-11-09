@@ -1,0 +1,97 @@
+@charset 'UTF-8';
+@use "sass:math"; //計算関数
+@use "../../global" as *;
+
+/* =====================================================
+  3.0  - Object
+===================================================== */
+/*
+  3.1  - Component
+----------------------------------------------------- */
+/*
+  Button
+*/
+
+/* Button Base */
+/*矢印が縮む*/
+.p-btn {
+  width: 60%;
+}
+.p-btn.-food {
+  width: 280px;
+  margin: 48px auto 40px;
+  @include mq(md) {
+    width: 320px;
+    margin: 80px auto 0;
+  }
+}
+
+.p-btn__button {
+  /*矢印の基点とするためrelativeを指定*/
+  position: relative;
+  width: 100%;
+  /*ボタンの形状*/
+  background: $base-color;
+  padding: 18px 60px 18px 30px;
+  display: inline-block;
+  text-align: center;
+  transition: all 0.2s linear;
+  color: $main-color;
+  text-decoration: none;
+  border: 1px solid $main-color;
+  border-radius: 10px;
+  outline: none;
+
+  &.-food {
+    padding: 24px 60px 24px 30px;
+  }
+}
+
+/*hoverした際のボタンの形状*/
+.p-btn__button:hover {
+  background: #fff;
+  color: #333;
+  border-color: #333;
+}
+
+/*矢印と線の形状*/
+
+.p-btn__button:before {
+  content: "";
+  /*絶対配置で線の位置を決める*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 20px;
+  /*線の形状*/
+  width: 20px;
+  height: 1px;
+  background: $main-color;
+}
+
+.p-btn__button::after {
+  content: "";
+  /*絶対配置で矢印の位置を決める*/
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  /*矢印の形状*/
+  border: 4px solid transparent;
+  border-top-width: 4px;
+  border-bottom-width: 4px;
+  border-left-color: $main-color;
+  /*アニメーションの指定*/
+  transition: all 0.2s linear;
+}
+
+/*hoverした際の矢印の形状*/
+.p-btn__button:hover::before {
+  background: #333;
+  right: 25px;
+}
+
+.p-btn__button:hover::after {
+  border-left-color: #333;
+  right: 20px;
+}

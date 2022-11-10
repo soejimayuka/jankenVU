@@ -1,9 +1,0 @@
-@charset 'UTF-8';
-@use "sass:math"; //計算関数
-@use "../../global" as *;
-/*
-  Card
-*/
-.p-card {
-  padding-bottom: pxToRem(48px);
-}

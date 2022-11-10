@@ -2,7 +2,7 @@
 
 ## DEMO
 
--
+https://soejimayuka.github.io/jankenVU/
 
 ## 紹介と使い方
 

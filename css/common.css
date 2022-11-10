@@ -1247,10 +1247,21 @@ button:not([type]):after {
 
 .bg-animation.-keyframe3 {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100px;
+  left: 32px;
   width: 40px;
+}
+@media screen and (min-width: 414px) {
+  .bg-animation.-keyframe3 {
+    left: 56px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .bg-animation.-keyframe3 {
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .keyframe3 {
@@ -1304,12 +1315,17 @@ button:not([type]):after {
 }
 
 .ending_img {
-  width: 320px;
+  width: 200px;
   position: absolute;
   top: 130px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+}
+@media screen and (min-width: 768px) {
+  .ending_img {
+    width: 320px;
+  }
 }
 .ending_img img {
   width: 100%;
@@ -1338,24 +1354,44 @@ button:not([type]):after {
   }
 }
 .ending-txt.-title {
-  font-size: 1.375rem;
+  font-size: 1rem;
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-title {
+    font-size: 1.375rem;
+  }
 }
 
 .ending-txt.-name {
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   padding-bottom: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-name {
+    font-size: 1.5rem;
+  }
 }
 
 .ending-txt.-eiga {
-  font-size: 1rem;
+  font-size: 0.875rem;
   padding-bottom: 1.5rem;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-eiga {
+    font-size: 1rem;
+  }
 }
 
 .ending-txt.-eiga span {
   display: block;
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   padding-top: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-eiga span {
+    font-size: 0.875rem;
+  }
 }
 
 .thanks-wrapper {
@@ -1386,8 +1422,13 @@ button:not([type]):after {
   }
 }
 .ending-txt.-thank {
-  font-size: 1.625rem;
+  font-size: 1.5rem;
   padding-top: 26.25rem;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-thank {
+    font-size: 1.625rem;
+  }
 }
 
 .totop-wrapper {
@@ -1413,13 +1454,18 @@ button:not([type]):after {
 }
 
 .ending-txt.-totop a {
-  font-size: 1rem;
+  font-size: 0.875rem;
   color: #fff;
   cursor: pointer;
   text-decoration: none;
   display: inline-block;
   padding-top: 31.875rem;
   cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+  .ending-txt.-totop a {
+    font-size: 1rem;
+  }
 }
 
 .l-pcBackground {

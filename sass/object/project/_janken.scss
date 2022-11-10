@@ -738,10 +738,17 @@
 }
 .bg-animation.-keyframe3 {
   position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 100px;
+  left: 32px;
   width: 40px;
+  @include mq(xs) {
+    left: 56px;
+  }
+  @include mq(md) {
+    top: 2px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .keyframe3 {
@@ -798,12 +805,16 @@
   top: 4vh;
 }
 .ending_img {
-  width: 320px;
+  width: 200px;
   position: absolute;
   top: 130px;
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
+
+  @include mq(md) {
+    width: 320px;
+  }
   & img {
     width: 100%;
   }
@@ -831,25 +842,41 @@
 }
 
 .ending-txt.-title {
-  $font-size: 22px;
-  font-size: pxToRem($font-size);
-  padding-bottom: pxToRem(24px);
-}
-.ending-txt.-name {
-  $font-size: 24px;
-  font-size: pxToRem($font-size);
-  padding-bottom: pxToRem(60px);
-}
-.ending-txt.-eiga {
   $font-size: 16px;
   font-size: pxToRem($font-size);
   padding-bottom: pxToRem(24px);
+  @include mq(md) {
+    $font-size: 22px;
+    font-size: pxToRem($font-size);
+  }
+}
+.ending-txt.-name {
+  $font-size: 18px;
+  font-size: pxToRem($font-size);
+  padding-bottom: pxToRem(60px);
+  @include mq(md) {
+    $font-size: 24px;
+    font-size: pxToRem($font-size);
+  }
+}
+.ending-txt.-eiga {
+  $font-size: 14px;
+  font-size: pxToRem($font-size);
+  padding-bottom: pxToRem(24px);
+  @include mq(md) {
+    $font-size: 16px;
+    font-size: pxToRem($font-size);
+  }
 }
 .ending-txt.-eiga span {
   display: block;
-  $font-size: 14px;
+  $font-size: 13px;
   font-size: pxToRem($font-size);
   padding-top: pxToRem(12px);
+  @include mq(md) {
+    $font-size: 14px;
+    font-size: pxToRem($font-size);
+  }
 }
 
 .thanks-wrapper {
@@ -881,9 +908,13 @@
 }
 
 .ending-txt.-thank {
-  $font-size: 26px;
+  $font-size: 24px;
   font-size: pxToRem($font-size);
   padding-top: pxToRem(420px);
+  @include mq(md) {
+    $font-size: 26px;
+    font-size: pxToRem($font-size);
+  }
 }
 
 .totop-wrapper {
@@ -907,7 +938,7 @@
   text-align: center;
 }
 .ending-txt.-totop a {
-  $font-size: 16px;
+  $font-size: 14px;
   font-size: pxToRem($font-size);
   color: #fff;
   cursor: pointer;
@@ -915,4 +946,8 @@
   display: inline-block;
   padding-top: pxToRem(510px);
   cursor: pointer;
+  @include mq(md) {
+    $font-size: 16px;
+    font-size: pxToRem($font-size);
+  }
 }

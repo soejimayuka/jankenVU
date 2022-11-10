@@ -52,7 +52,10 @@
   width: 80%;
   position: relative;
   margin: 0 auto;
-  height: 210px;
+  height: 170px;
+  @include mq(sm) {
+    height: 180px;
+  }
   @include mq(md) {
     height: 180px;
   }
@@ -436,13 +439,21 @@
 .KekkaBox {
   border-radius: 50%;
   background-color: #e4efab;
-  width: 280px;
-  height: 280px;
+  width: 260px;
+  height: 260px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   flex-flow: column;
-  margin-top: pxToRem(100px);
+  margin-top: pxToRem(40px);
+  @include mq(sm) {
+    margin-top: pxToRem(60px);
+  }
+  @include mq(md) {
+    margin-top: pxToRem(80px);
+    width: 280px;
+    height: 280px;
+  }
 }
 .kekkaP1 {
   width: 100%;
@@ -467,7 +478,10 @@
 .KekkaBox2 {
   width: 90%;
   margin: 0 auto;
-  margin-top: pxToRem(40px);
+  margin-top: pxToRem(28px);
+  @include mq(sm) {
+    margin-top: pxToRem(30px);
+  }
   @include mq(md) {
     margin-top: pxToRem(32px);
   }
@@ -566,7 +580,10 @@
 }
 // 右側 ゲーム説明
 .l-toppage {
-  padding-top: pxToRem(48px);
+  padding-top: pxToRem(32px);
+  @include mq(xs) {
+    padding-top: pxToRem(36px);
+  }
   @include mq(md) {
     padding-top: pxToRem(38px);
   }
@@ -577,7 +594,13 @@
   background-color: #fff;
   padding: pxToRem(32px) pxToRem(32px);
   border-radius: 12px;
-  margin-top: pxToRem(40px);
+  margin-top: pxToRem(10px);
+  @include mq(xs) {
+    margin-top: pxToRem(21px);
+  }
+  @include mq(sm) {
+    margin-top: pxToRem(24px);
+  }
   @include mq(md) {
     margin-top: pxToRem(28px);
   }
@@ -599,8 +622,11 @@
 }
 .setumei-btn-wrapper {
   width: 180px;
-  margin: pxToRem(52px) auto 0;
-  @include mq(md) {
+  margin: pxToRem(24px) auto 0;
+  @include mq(xs) {
+    margin-top: pxToRem(36px);
+  }
+  @include mq(sm) {
     margin-top: pxToRem(40px);
   }
 }
